@@ -45,7 +45,7 @@ public class hookMode : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse1)){//CLICK_DERECHO - ENTRA AL HOOK MODE
             hookModo = false;//ENTRA AL HOOK_MODE
             hook_Obj.transform.position = hook_Start_Obj.transform.position;//POSICION DEL HOOK VUELVE A LA POSICION DE PARTIDA SI CLICK_DERECHO
-            Debug.Log("TOCO");
+            //Debug.Log("TOCO");
             //joinPoint.enabled = false;
         }
 

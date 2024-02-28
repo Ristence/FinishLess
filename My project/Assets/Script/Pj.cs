@@ -7,11 +7,13 @@ using UnityEditor.Callbacks;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 using Vector2 = UnityEngine.Vector2;
+using DG.Tweening;
 
 public class Pj : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public Hook_Script hook_Script;
     public Animator pjAnim;
     public GameObject pj;
     public checkGround checkGround;
@@ -29,7 +31,7 @@ public class Pj : MonoBehaviour
     void Start()
     {
        rb = GetComponent<Rigidbody2D>();
-       
+       DOTween.Init();
        
     } 
 
@@ -45,6 +47,10 @@ public class Pj : MonoBehaviour
         float movV = Input.GetAxis("Vertical") * Time.deltaTime;
         rb.velocityX = movH * walkSpeed;
         
+        if(movV>0){
+            
+        }
+
         if(movH < 0){
             //Derecha
             transform.eulerAngles = new Vector3(0,180);
@@ -73,4 +79,16 @@ public class Pj : MonoBehaviour
             rb.gravityScale = gravityInFall;
         }     
     }
+
+
+    void OnTriggerStay2D (Collider2D other)
+	{
+		if (Input.GetKey(KeyCode.W)) 
+		{
+            transform.SetParent(other.transform);
+            rb.isKinematic = true;
+            Debug.Log("assa");
+
+		}
+	}
 }

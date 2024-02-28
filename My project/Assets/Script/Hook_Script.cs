@@ -29,6 +29,7 @@ public class Hook_Script : MonoBehaviour
             Debug.Log("TOCOQLO");
 
             hookMode_Sp.hook_Obj_Rb.bodyType = RigidbodyType2D.Static;
+            transform.parent = null;
 			//hookMode_Sp.hook_Obj.transform.position = hookMode_Sp.rayHit;
 
 		}
