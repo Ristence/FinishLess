@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hook_Script : MonoBehaviour
 {
 
-    public hookMode hookMode_Sp;
+    public Rigidbody2D hook_Script_Rb;
     public SpriteRenderer hook_Red_sR,hook_Green_sR;
 
 
@@ -28,7 +28,7 @@ public class Hook_Script : MonoBehaviour
 		{
             Debug.Log("TOCOQLO");
 
-            hookMode_Sp.hook_Obj_Rb.bodyType = RigidbodyType2D.Static;
+            hook_Script_Rb.bodyType = RigidbodyType2D.Static;
             transform.parent = null;
 			//hookMode_Sp.hook_Obj.transform.position = hookMode_Sp.rayHit;
 

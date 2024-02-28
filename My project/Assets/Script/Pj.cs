@@ -81,14 +81,5 @@ public class Pj : MonoBehaviour
     }
 
 
-    void OnTriggerStay2D (Collider2D other)
-	{
-		if (Input.GetKey(KeyCode.W)) 
-		{
-            transform.SetParent(other.transform);
-            rb.isKinematic = true;
-            Debug.Log("assa");
-
-		}
-	}
+    
 }

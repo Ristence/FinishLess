@@ -24,7 +24,7 @@ public class hookMode : MonoBehaviour
     {
         hookModo = false;
         distRay = 30f;
-        hook_Shoot_Force = 50000;
+        hook_Shoot_Force = 100;
         //joinPoint.autoConfigureDistance = false;
         //joinPoint.enabled = false;
         DOTween.Init();
@@ -75,7 +75,7 @@ public class hookMode : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0)){//CLICK_IZQUIERDO            
             rayHit = hookRay.point;
             hook_Obj_Rb.bodyType = RigidbodyType2D.Dynamic;
-            hook_Obj_Rb.AddForce(dir * hook_Shoot_Force * Time.deltaTime);
+            hook_Obj_Rb.AddForce(dir * hook_Shoot_Force * Time.deltaTime,ForceMode2D.Impulse);
 
         }else if(hookModo){
 
