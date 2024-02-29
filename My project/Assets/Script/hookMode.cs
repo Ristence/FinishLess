@@ -42,10 +42,11 @@ public class hookMode : MonoBehaviour
         if(hookModo){
             hookFunction();
         }
-        if(Input.GetKeyDown(KeyCode.Mouse1)){//CLICK_DERECHO - ENTRA AL HOOK MODE
-            hookModo = false;//ENTRA AL HOOK_MODE
+        if(Input.GetKeyDown(KeyCode.Mouse1)){//CLICK_DERECHO - SALE DEL HOOK MODE
+            hookModo = false;
+            hook_Script.hook_Script_Rb.bodyType = RigidbodyType2D.Kinematic;
             hook_Obj.transform.position = hook_Start_Obj.transform.position;//POSICION DEL HOOK VUELVE A LA POSICION DE PARTIDA SI CLICK_DERECHO
-            //Debug.Log("TOCO");
+            hook_Script.transform.SetParent(character.transform,true);
             //joinPoint.enabled = false;
         }
 
@@ -72,18 +73,18 @@ public class hookMode : MonoBehaviour
 
         grapObj.transform.position = new Vector2(mousePos.x,mousePos.y);
 
-        if(Input.GetKeyDown(KeyCode.Mouse0)){//CLICK_IZQUIERDO            
+        if(Input.GetKeyDown(KeyCode.Mouse0)){//CLICK_IZQUIERDO - ENTRA AL HOOK MODE         
             rayHit = hookRay.point;
             hook_Obj_Rb.bodyType = RigidbodyType2D.Dynamic;
             hook_Obj_Rb.AddForce(dir * hook_Shoot_Force * Time.deltaTime,ForceMode2D.Impulse);
 
-        }else if(hookModo){
+        }
 
 
 
             //joinPoint.enabled = false;
             
-        }
+        
 
     }
 }
