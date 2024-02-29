@@ -79,7 +79,7 @@ public class Pj : MonoBehaviour
             rb.gravityScale = gravityInFall;
         }     
     }
-
+    
 
     
 }
