@@ -67,9 +67,11 @@ public class Pj : MonoBehaviour
             //Abajo
             rb.AddForce(Vector2.down * Time.deltaTime);           
         }
-        if(Input.GetKeyDown(KeyCode.Space) ){ 
+        if(Input.GetKeyDown(KeyCode.Space) && checkGround.checkGroundRay ){ 
                       
            Jumping();
+        }else{
+            
         }
 
         if(rb.velocityY > 0){
