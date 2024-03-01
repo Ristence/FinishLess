@@ -83,7 +83,7 @@ public class hookMode : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D (Collider2D other)
+    void OnCollisionEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Chain") 
 		{
@@ -92,5 +92,7 @@ public class hookMode : MonoBehaviour
 
 		}
 	}
+
+    
     
 }
