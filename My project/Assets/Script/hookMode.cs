@@ -46,9 +46,9 @@ public class hookMode : MonoBehaviour
             hookModo = false;
             hook_Script.hook_Script_Rb.bodyType = RigidbodyType2D.Kinematic;
             hook_Obj.transform.position = hook_Start_Obj.transform.position;//POSICION DEL HOOK VUELVE A LA POSICION DE PARTIDA SI CLICK_DERECHO
-            hook_Script.transform.parent = transform;//EL HOOK_OBJ HACE PADRE AL JUGADOR
-            transform.parent = null;
-            character.rb.bodyType = RigidbodyType2D.Dynamic;
+            //hook_Script.transform.parent = transform;//EL HOOK_OBJ HACE PADRE AL JUGADOR
+            //transform.parent = null;
+            //character.rb.bodyType = RigidbodyType2D.Dynamic;
             //joinPoint.enabled = false;
         }
 
@@ -83,12 +83,12 @@ public class hookMode : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Chain") 
 		{
-            transform.parent = other.transform;
-            character.rb.bodyType = RigidbodyType2D.Kinematic;
+            //transform.parent = other.transform;
+            //character.rb.bodyType = RigidbodyType2D.Kinematic;
 
 		}
 	}
