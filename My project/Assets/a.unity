@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 65861843}
   m_Layer: 0
   m_Name: Cuerdas_4
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 153192005}
   m_Layer: 0
   m_Name: Cuerdas_5
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 589449646}
   m_Layer: 0
   m_Name: Cuerdas_2
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1446,7 +1446,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!4 &981289822
 Transform:
   m_ObjectHideFlags: 0
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 1335415898}
   m_Layer: 0
   m_Name: HookObj
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1835,7 +1835,7 @@ GameObject:
   - component: {fileID: 1343951527}
   m_Layer: 0
   m_Name: Cuerdas_1
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,7 +2053,7 @@ GameObject:
   - component: {fileID: 1390409103}
   m_Layer: 0
   m_Name: Cuerdas_6
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,7 +2128,7 @@ HingeJoint2D:
   m_GameObject: {fileID: 1390409101}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 153192004}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -2595,7 +2595,7 @@ GameObject:
   - component: {fileID: 1738201639}
   m_Layer: 0
   m_Name: Cuerdas_3
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3041,7 +3041,7 @@ GameObject:
   - component: {fileID: 2141364803}
   m_Layer: 0
   m_Name: Cuerdas_0
-  m_TagString: Untagged
+  m_TagString: Chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3128,7 +3128,7 @@ HingeJoint2D:
   m_GameObject: {fileID: 2141364801}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1335415899}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity

@@ -82,6 +82,15 @@ public class Pj : MonoBehaviour
         }     
     }
     
+        private void OnCollisionStay2D(Collision2D other) {    
 
+		if (other.gameObject.tag == "Chain") 
+		{
+            //transform.parent = other.transform;
+            //character.rb.bodyType = RigidbodyType2D.Kinematic;
+            Debug.Log("ajhsgas");
+
+		}
+	}
     
 }
