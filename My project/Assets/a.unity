@@ -1912,7 +1912,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &981289822
 Transform:
   m_ObjectHideFlags: 0
@@ -1928,8 +1928,6 @@ Transform:
   m_Children:
   - {fileID: 420088267}
   - {fileID: 674214258}
-  - {fileID: 1718951586}
-  - {fileID: 1335415893}
   - {fileID: 2124330891}
   - {fileID: 1569587413}
   m_Father: {fileID: 0}
@@ -2013,6 +2011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePos: {x: 0, y: 0}
   sight: {fileID: 76500570}
+  ikArmF: {fileID: 2124330891}
+  ikArmB: {fileID: 1569587413}
   main_Camara: {fileID: 519420028}
 --- !u!114 &981289826
 MonoBehaviour:
@@ -2124,9 +2124,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335415892}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.35, y: 9.21, z: 0}
-  m_LocalScale: {x: 2.2551, y: 2.2551, z: 2.2551}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.86882436, y: 0.81711566, z: 0}
+  m_LocalScale: {x: 2.2550998, y: 2.2550998, z: 2.2551}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2141364806}
@@ -2139,7 +2139,7 @@ Transform:
   - {fileID: 440510384}
   - {fileID: 1742472747}
   - {fileID: 550562813}
-  m_Father: {fileID: 981289822}
+  m_Father: {fileID: 1718951586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1335415894
 SpriteRenderer:
@@ -3163,12 +3163,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718951585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.35, y: 9.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.9633708, y: -0.2681728, z: -0, w: 0}
+  m_LocalPosition: {x: 1.507, y: -0.007, z: 0}
+  m_LocalScale: {x: 0.19999996, y: 0.19999999, z: 0.20000002}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 981289822}
+  m_Children:
+  - {fileID: 1335415893}
+  m_Father: {fileID: 2093685458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1738201637
 GameObject:
@@ -3670,6 +3671,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 866956982}
+  - {fileID: 1718951586}
   m_Father: {fileID: 1571068412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -46.056}
 --- !u!1 &2105567341

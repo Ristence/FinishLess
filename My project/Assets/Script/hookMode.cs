@@ -46,7 +46,7 @@ public class hookMode : MonoBehaviour
             hookModo = false;
             hook_Script.hook_Script_Rb.bodyType = RigidbodyType2D.Kinematic;
             hook_Obj.transform.position = hook_Start_Obj.transform.position;//POSICION DEL HOOK VUELVE A LA POSICION DE PARTIDA SI CLICK_DERECHO
-            
+            hook_Obj.transform.parent = hook_Start_Obj.transform;
             //transform.parent = null;
             //character.rb.bodyType = RigidbodyType2D.Dynamic;
             //hook_Script.transform.parent = transform;//EL HOOK_OBJ HACE PADRE AL JUGADOR
@@ -75,11 +75,11 @@ public class hookMode : MonoBehaviour
 
         grapObj.transform.position = new Vector2(mousePos.x,mousePos.y);
 
-        if(Input.GetKeyDown(KeyCode.Mouse0)){//CLICK_IZQUIERDO - ENTRA AL HOOK MODE         
+        if(Input.GetKeyDown(KeyCode.Mouse0)){//CLICK_IZQUIERDO - DISPARA EL HOOK        
             rayHit = hookRay.point;
             hook_Obj_Rb.bodyType = RigidbodyType2D.Dynamic;
-            hook_Obj_Rb.AddForce(dir * hook_Shoot_Force * Time.deltaTime,ForceMode2D.Impulse);
-
+            hook_Obj_Rb.AddForce(dir * hook_Shoot_Force * Time.deltaTime,ForceMode2D.Impulse);//DA FUERZA PARA EL DISPARO
+            hook_Obj.transform.parent = null;
         }
     }
 

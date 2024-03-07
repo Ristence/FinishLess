@@ -15,7 +15,7 @@ public class looking : MonoBehaviour
     public Vector2 mousePos;
 
   
-    public Transform sight;
+    public Transform sight, ikArmF, ikArmB;
     public GameObject main_Camara;
     
   
@@ -36,8 +36,8 @@ public class looking : MonoBehaviour
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         sight.position = new Vector2(mousePos.x,mousePos.y);
-        
-
+        ikArmF.position = sight.position;
+        //ikArmB.position = sight.position;
         
        
     }
