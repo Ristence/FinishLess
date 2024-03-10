@@ -14,6 +14,7 @@ public class Pj : MonoBehaviour
 
     public Rigidbody2D rb;
     public Hook_Script hook_Script;
+    public obstacles obstacles_Script;
     public Animator pjAnim;
     public GameObject pj;
     public checkGround checkGround;
@@ -67,7 +68,7 @@ public class Pj : MonoBehaviour
             //Abajo
             rb.AddForce(Vector2.down * Time.deltaTime);           
         }
-        if(Input.GetKeyDown(KeyCode.Space) && checkGround.checkGroundRay ){ 
+        if(Input.GetKeyDown(KeyCode.Space) && checkGround.checkGroundRay && !obstacles_Script.checkObstacleRay){ 
                       
            Jumping();
         }else{
