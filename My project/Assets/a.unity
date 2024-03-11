@@ -812,7 +812,7 @@ GameObject:
   m_Layer: 0
   m_Name: CheckObstacle
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -858,7 +858,7 @@ Transform:
   m_GameObject: {fileID: 415764923}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.3, y: -59.2, z: 0}
+  m_LocalPosition: {x: -7.4, y: -58.7, z: 0}
   m_LocalScale: {x: 34.692463, y: 16.714352, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2368,7 +2368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea19b782275d78244bafe048ff615943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkObstacle: {fileID: 339516041}
+  checkObstacleObj: {fileID: 339516041}
   hitRayObj: {fileID: 0}
   distRayObstacle: 0
   obstacleLayer:

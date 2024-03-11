@@ -19,7 +19,7 @@ public class Pj : MonoBehaviour
     public GameObject pj;
     public checkGround checkGround;
 
-    private float walkSpeed = 1000f;
+    private float walkSpeed, runSpeed;
     private float jumpSpeed = 40;
     public float gravity = 5;
     public float gravityInFall = 15;
@@ -33,6 +33,8 @@ public class Pj : MonoBehaviour
     {
        rb = GetComponent<Rigidbody2D>();
        DOTween.Init();
+       walkSpeed = 1000f;
+       runSpeed = 2500f;
        
     } 
 
@@ -46,7 +48,13 @@ public class Pj : MonoBehaviour
     {
         float movH = Input.GetAxis("Horizontal") * Time.deltaTime;
         float movV = Input.GetAxis("Vertical") * Time.deltaTime;
-        rb.velocityX = movH * walkSpeed;
+
+        if(Input.GetKey(KeyCode.LeftShift)){
+            rb.velocityX = movH * runSpeed;
+        }else{
+            rb.velocityX = movH * walkSpeed;
+        }
+            
         
         if(movV>0){
             
