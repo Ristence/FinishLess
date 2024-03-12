@@ -3,15 +3,19 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Numerics;
+using Vector3 = UnityEngine.Vector3;
+using Vector2 = UnityEngine.Vector2;
 
 public class obstacles : MonoBehaviour
 { 
-    
+    public checkObstacle checkObstacles;
     
     public GameObject checkObstacleObj,hitRayObj;
     public RaycastHit2D checkObstacleRay;
     
     public Vector3 hitObjHeight ;
+
     public BoxCollider2D collObj;
     public float distRayObstacle;
     public LayerMask obstacleLayer;
@@ -23,6 +27,7 @@ public class obstacles : MonoBehaviour
     {
         obstacleLayer = LayerMask.GetMask("Obstacles");
         distRayObstacle = 3f;
+        
         DOTween.Init();
     }
 
@@ -32,14 +37,16 @@ public class obstacles : MonoBehaviour
         isObstacle();
     }
 
+      
     public void isObstacle(){
 
-        checkObstacleRay = Physics2D.Raycast(checkObstacleObj.transform.position,checkObstacleObj.transform.right,distRayObstacle,obstacleLayer);//CHOCA CON EL OBSTACULO
-        
+       // checkObstacleRay = Physics2D.Raycast(checkObstacleObj.transform.position,checkObstacleObj.transform.right,distRayObstacle,obstacleLayer);//CHOCA CON EL OBSTACULO
        
-        
+       Debug.Log(checkObstacles.collObj.bounds.size.y);
 
-        if(checkObstacleRay){
+
+        //-----------RAYCAST--------------
+       /*  if(checkObstacleRay){
             
         
             hitRayObj = checkObstacleRay.collider.gameObject;//ASIGNA EL TRANSFORM DEL OBJETO QUE ESTA TOCANDO EL RAYCAST
@@ -56,7 +63,7 @@ public class obstacles : MonoBehaviour
         }else{
             hitRayObj = null;
             collObj = null;
-        }
+        } */
     }
 
     public void obstacleAction(){
@@ -67,5 +74,6 @@ public class obstacles : MonoBehaviour
         }
     }
 
+    
 
 }
