@@ -8,9 +8,11 @@ public class obstacles : MonoBehaviour
 { 
     
     
-    public GameObject checkObstacleObj;
+    public GameObject checkObstacleObj,hitRayObj;
     public RaycastHit2D checkObstacleRay;
-    public Transform hitRayObj;
+    
+    public Vector3 hitObjHeight ;
+    public BoxCollider2D collObj;
     public float distRayObstacle;
     public LayerMask obstacleLayer;
     
@@ -34,24 +36,26 @@ public class obstacles : MonoBehaviour
 
         checkObstacleRay = Physics2D.Raycast(checkObstacleObj.transform.position,checkObstacleObj.transform.right,distRayObstacle,obstacleLayer);//CHOCA CON EL OBSTACULO
         
-        try {
-            hitRayObj = checkObstacleRay.transform.GetComponent<Transform>();//ASIGNA EL TRANSFORM DEL OBJETO QUE ESTA TOCANDO EL RAYCAST
-        }
-        catch (Exception e) {
-        
-        } 
-
+       
         
 
         if(checkObstacleRay){
             
-            checkObstacleObj.transform.position = new Vector3(checkObstacleObj.transform.position.x,hitRayObj.position.y,0);
+        
+            hitRayObj = checkObstacleRay.collider.gameObject;//ASIGNA EL TRANSFORM DEL OBJETO QUE ESTA TOCANDO EL RAYCAST
+            collObj = hitRayObj.transform.GetComponent<BoxCollider2D>();
 
+            hitObjHeight = collObj.bounds.size;
+
+
+            //checkObstacleObj.transform.position = new Vector3(checkObstacleObj.transform.position.x,hitObjHeight.y,0);
             Debug.DrawRay(checkObstacleObj.transform.position,checkObstacleObj.transform.right * distRayObstacle,Color.yellow);
-            Debug.Log( "checkObstacleObj: " + checkObstacleObj.transform.position);
+            Debug.Log("SIZE: " + hitObjHeight.y);
+                       
             obstacleAction();
         }else{
-
+            hitRayObj = null;
+            collObj = null;
         }
     }
 
@@ -59,7 +63,7 @@ public class obstacles : MonoBehaviour
 
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            transform.DOMove(new Vector3(checkObstacleRay.point.x,transform.position.y + hitRayObj.localScale.y,0),10f * Time.deltaTime);
+            transform.DOMove(new Vector3(checkObstacleRay.point.x,transform.position.y + hitRayObj.transform.localScale.y,0),20f * Time.deltaTime);
         }
     }
 
