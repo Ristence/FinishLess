@@ -8,11 +8,13 @@ using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 using Vector2 = UnityEngine.Vector2;
 using UnityEditor;
+using DG.Tweening;
 
 public class looking : MonoBehaviour
 {
 
     public Vector2 mousePos;
+    public Transform armFSolver;
 
   
     public Transform sight, ikArmF, ikArmB;
@@ -24,7 +26,7 @@ public class looking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        DOTween.Init();
        
     }
 
@@ -36,10 +38,29 @@ public class looking : MonoBehaviour
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         sight.position = new Vector2(mousePos.x,mousePos.y);
-        ikArmF.position = sight.position;
+
+        ArmIkFunction() ;
+
         //ikArmB.position = sight.position;
         
        
+    }
+
+    public void ArmIkFunction(){
+
+        
+        if(Input.GetKey(KeyCode.Mouse0)){
+            ikArmF.DOMove(sight.position,1);
+        }else{
+            ikArmF.DOMove(armFSolver.position,1);
+        }
+        
+        
+        
+
+
+
+
     }
 
 }
