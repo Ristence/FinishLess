@@ -17,7 +17,7 @@ public class obstacles : MonoBehaviour
     public Vector3 hitObjHeight ;
 
     public BoxCollider2D collObj;
-    public float distRayObstacle;
+    public float distRayObstacle, offsetX,offsetY;
     public LayerMask obstacleLayer;
     
 
@@ -42,9 +42,9 @@ public class obstacles : MonoBehaviour
 
        // checkObstacleRay = Physics2D.Raycast(checkObstacleObj.transform.position,checkObstacleObj.transform.right,distRayObstacle,obstacleLayer);//CHOCA CON EL OBSTACULO
        
-       Debug.Log(checkObstacles.collObj.bounds.size.y);
+        Debug.Log(checkObstacles.collObj.bounds.size.y);
 
-
+        obstacleAction();
         //-----------RAYCAST--------------
        /*  if(checkObstacleRay){
             
@@ -59,7 +59,7 @@ public class obstacles : MonoBehaviour
             Debug.DrawRay(checkObstacleObj.transform.position,checkObstacleObj.transform.right * distRayObstacle,Color.yellow);
             Debug.Log("SIZE: " + hitObjHeight.y);
                        
-            obstacleAction();
+            
         }else{
             hitRayObj = null;
             collObj = null;
@@ -70,7 +70,7 @@ public class obstacles : MonoBehaviour
 
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            transform.DOMove(new Vector3(checkObstacleRay.point.x,transform.position.y + hitRayObj.transform.localScale.y,0),20f * Time.deltaTime);
+            transform.DOMove(new Vector3(transform.position.x,checkObstacles.collObj.bounds.size.y,0) + checkObstacles.transform.right,20f * Time.deltaTime);
         }
     }
 
