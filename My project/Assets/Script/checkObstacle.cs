@@ -21,20 +21,20 @@ public class checkObstacle : MonoBehaviour
        
     }
 
-      private void OnTriggerStay2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         
         try{
             
             if(other.gameObject.tag == "Collisionable"){
             
                 collObj = other;
-            }else{
-                collObj = null;
             }
 
         }catch(Exception e){
 
-        }
-        
+        }       
     }
+     private void OnTriggerExit2D(Collider2D other) {
+            collObj = null;
+     }
 }

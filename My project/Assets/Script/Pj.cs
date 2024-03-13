@@ -15,6 +15,7 @@ public class Pj : MonoBehaviour
     public Rigidbody2D rb;
     public Hook_Script hook_Script;
     public obstacles obstacles_Script;
+    public checkObstacle checkObstacles;
     public Animator pjAnim;
     public GameObject pj;
     public checkGround checkGround;
@@ -38,9 +39,7 @@ public class Pj : MonoBehaviour
        
     } 
 
-    public void Jumping () {
-         rb.AddForce(Vector2.up * jumpSpeed ,ForceMode2D.Impulse);
-    }
+    
 
 
     // Update is called once per frame
@@ -55,10 +54,7 @@ public class Pj : MonoBehaviour
             rb.velocityX = movH * walkSpeed;
         }
             
-        
-        if(movV>0){
-            
-        }
+       
 
         if(movH < 0){
             //Derecha
@@ -76,11 +72,9 @@ public class Pj : MonoBehaviour
             //Abajo
             rb.AddForce(Vector2.down * Time.deltaTime);           
         }
-        if(Input.GetKeyDown(KeyCode.Space) && checkGround.checkGroundRay && !obstacles_Script.checkObstacleRay){ 
+        if(Input.GetKeyDown(KeyCode.Space) && checkGround.checkGroundRay && !checkObstacles.collObj){ 
                       
            Jumping();
-        }else{
-            
         }
 
         if(rb.velocityY > 0){
@@ -90,8 +84,12 @@ public class Pj : MonoBehaviour
             rb.gravityScale = gravityInFall;
         }     
     }
+
+    public void Jumping () {
+         rb.AddForce(Vector2.up * jumpSpeed ,ForceMode2D.Impulse);
+    }
     
-        private void OnCollisionStay2D(Collision2D other) {    
+    private void OnCollisionStay2D(Collision2D other) {    
 
 		if (other.gameObject.tag == "Chain" && Input.GetKeyDown(KeyCode.E)) 
 		{

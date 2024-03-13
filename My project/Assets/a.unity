@@ -815,7 +815,7 @@ GameObject:
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &339516042
 Transform:
   m_ObjectHideFlags: 0
@@ -2242,6 +2242,7 @@ MonoBehaviour:
   rb: {fileID: 981289820}
   hook_Script: {fileID: 1335415900}
   obstacles_Script: {fileID: 981289828}
+  checkObstacles: {fileID: 1907403874}
   pjAnim: {fileID: 420088268}
   pj: {fileID: 981289819}
   checkGround: {fileID: 674214259}
@@ -2375,8 +2376,7 @@ MonoBehaviour:
   hitObjHeight: {x: 0, y: 0, z: 0}
   collObj: {fileID: 0}
   distRayObstacle: 0
-  offsetX: 0
-  offsetY: 0
+  distPjObs: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
