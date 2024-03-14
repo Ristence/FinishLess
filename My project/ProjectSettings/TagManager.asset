@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collisionable
   - Chain
+  - GrabObj
   layers:
   - Default
   - TransparentFX

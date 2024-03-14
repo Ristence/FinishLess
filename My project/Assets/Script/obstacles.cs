@@ -6,7 +6,6 @@ using DG.Tweening;
 using System.Numerics;
 using Vector3 = UnityEngine.Vector3;
 using Vector2 = UnityEngine.Vector2;
-using TreeEditor;
 
 public class obstacles : MonoBehaviour
 { 
@@ -18,7 +17,7 @@ public class obstacles : MonoBehaviour
     public Vector3 hitObjHeight ;
 
     public BoxCollider2D collObj;
-    public float distRayObstacle, distPjObs;
+    public float distRayObstacle, offsetX,offsetY;
     public LayerMask obstacleLayer;
     
 
@@ -70,8 +69,8 @@ public class obstacles : MonoBehaviour
     public void obstacleAction(){
 
 
-        if(Input.GetKeyDown(KeyCode.Space)){
-            transform.DOMove(new Vector3(transform.position.x,transform.position.y + checkObstacles.collObj.bounds.size.y,0) + (transform.right * 3.2f),15f * Time.deltaTime);
+        if(Input.GetKeyDown(KeyCode.Space) && checkObstacles.collObj.bounds.size.y >= 5){
+            transform.DOMove(new Vector3(transform.position.x,checkObstacles.collObj.bounds.size.y,0) + checkObstacles.transform.right,20f * Time.deltaTime);
         }
     }
 

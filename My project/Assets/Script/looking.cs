@@ -14,14 +14,11 @@ public class looking : MonoBehaviour
 {
 
     public Vector2 mousePos;
-    public Transform armFSolver;
+    public Transform armFSolver, armBSolver;
 
   
     public Transform sight, ikArmF, ikArmB;
     public GameObject main_Camara;
-    
-  
-    
     
     // Start is called before the first frame update
     void Start()
@@ -56,7 +53,11 @@ public class looking : MonoBehaviour
         }
         
         
-        
+        if(Input.GetKey(KeyCode.Mouse1)){
+            ikArmB.DOMove(sight.position,1);
+        }else{
+            ikArmB.DOMove(armBSolver.position,1);
+        }
 
 
 
