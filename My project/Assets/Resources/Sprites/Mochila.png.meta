@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mochila_0: 5124475773856084676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
