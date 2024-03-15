@@ -37,17 +37,21 @@ public class checkGrabObj : MonoBehaviour {
 
             }   
             
-            other.GetComponent<Rigidbody2D>().isKinematic = true;
-            other.transform.parent = handF.transform;
-            other.transform.position = handF.transform.position;
+            grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
+            grabObj.transform.parent = handF.transform;
+            grabObj.transform.position = handF.transform.position;
             
         }else{
-            other.transform.parent = null;
-            other.GetComponent<Rigidbody2D>().isKinematic = false;
+            grabObj.transform.parent = null;
 
         }
 
 
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        
+        grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
     }
 
 }

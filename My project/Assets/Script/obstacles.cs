@@ -42,7 +42,7 @@ public class obstacles : MonoBehaviour
 
        // checkObstacleRay = Physics2D.Raycast(checkObstacleObj.transform.position,checkObstacleObj.transform.right,distRayObstacle,obstacleLayer);//CHOCA CON EL OBSTACULO
        
-        Debug.Log(checkObstacles.collObj.bounds.size.y);
+        //Debug.Log(checkObstacles.collObj.bounds.size.y);
 
         obstacleAction();
         //-----------RAYCAST--------------

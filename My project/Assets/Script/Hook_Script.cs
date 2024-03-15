@@ -26,7 +26,7 @@ public class Hook_Script : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Collisionable") 
 		{
-            Debug.Log("TOCOQLO");
+            //Debug.Log("TOCOQLO");
 
             hook_Script_Rb.bodyType = RigidbodyType2D.Static;
             transform.parent = null;

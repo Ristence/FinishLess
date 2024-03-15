@@ -23,9 +23,9 @@ public class backpackLogic : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         
-        if(checkGrabObjs.gameObject.tag == "BackpackSlot"){
+        if(checkGrabObjs.grabObj.gameObject.tag == "BackpackSlot"){
             Debug.Log("hakjshdk");
         }
     }
