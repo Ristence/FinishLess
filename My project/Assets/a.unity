@@ -956,12 +956,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301997598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.56, y: 14.66, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: -0.70845497, y: -0.705756, z: -0, w: 0}
+  m_LocalPosition: {x: -0.16349423, y: 2.371478, z: 0}
+  m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1966299323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &301997602
 Rigidbody2D:
@@ -3615,7 +3615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406516632}
   - component: {fileID: 1406516633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slot01
   m_TagString: BackpackSlot
   m_Icon: {fileID: 0}
@@ -3630,7 +3630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406516631}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4774,6 +4774,7 @@ Transform:
   - {fileID: 1571068412}
   - {fileID: 715111554}
   - {fileID: 2050052558}
+  - {fileID: 301997601}
   - {fileID: 1450661181}
   m_Father: {fileID: 420088267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5258,7 +5259,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 301997601}
   - {fileID: 519420032}
   - {fileID: 1968371234}
   - {fileID: 76500570}

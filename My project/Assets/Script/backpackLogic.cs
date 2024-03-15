@@ -16,17 +16,16 @@ public class backpackLogic : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        //Debug.Log(.gameObject.tag);
     }
+    
+    
+     
+public void slotFunction(){
+    
+}
 
 
-
-    private void OnTriggerStay2D(Collider2D other) {
-        
-        if(checkGrabObjs.grabObj.gameObject.tag == "BackpackSlot"){
-            Debug.Log("hakjshdk");
-        }
-    }
+    
 }

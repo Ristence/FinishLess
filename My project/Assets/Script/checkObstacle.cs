@@ -23,14 +23,16 @@ public class checkObstacle : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) {
         if(other.gameObject.tag == "Collisionable"){
-            try{           
+                     
                 collObj = other;        
-            }catch(Exception e){
-                
-            }
+            
         }       
     }
      private void OnTriggerExit2D(Collider2D other) {
+            try{  
             collObj = null;
+            }catch(Exception e){
+                
+            }
      }
 }
