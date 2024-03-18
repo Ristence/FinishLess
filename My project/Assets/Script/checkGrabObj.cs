@@ -25,7 +25,7 @@ public class checkGrabObj : MonoBehaviour {
     }
 
 
-    private void OnTriggerStay2D(Collider2D other) {
+        private void OnTriggerStay2D(Collider2D other) {
     
         if(other.gameObject.tag == "GrabObj" && Input.GetKey(KeyCode.Mouse0) ){
 
@@ -40,20 +40,17 @@ public class checkGrabObj : MonoBehaviour {
             grabObj.GetComponent<Rigidbody2D>().isKinematic = true;
             //grabObj.transform.parent = handF.transform;
             grabObj.transform.position = handF.transform.position;
-            
         }
-        if(other.gameObject.tag == "GrabObj" ){
+  
+        }  
 
-            
-            
-        }
+     
 
-    }
-
-    /* private void OnTriggerExit2D(Collider2D other) {
+   /*  private void OnTriggerExit2D(Collider2D other) {
         
         grabObj.GetComponent<Rigidbody2D>().isKinematic = false;
-    } */
+    } */ 
+
+
 
 }
-

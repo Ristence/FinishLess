@@ -6,7 +6,8 @@ public class backpackLogic : MonoBehaviour
 {
     public checkGrabObj checkGrabObjs;
     public GameObject slot01;
-    public BoxCollider2D slot01Coll;
+
+    public bool slot1Bool;
 
 
     // Start is called before the first frame update
@@ -22,10 +23,19 @@ public class backpackLogic : MonoBehaviour
     
     
      
-public void slotFunction(){
-    
-}
+    public void slotFunction(){
+        checkGrabObjs.transform.position = slot01.transform.position;
+    } 
 
-
+    private void OnTriggerStay2D(Collider2D other) {
     
+            if(other.gameObject.tag == "GrabObj"){
+
+                Debug.Log("akjshkjsa");
+                slotFunction();
+
+            }
+    
+    
+    }
 }
