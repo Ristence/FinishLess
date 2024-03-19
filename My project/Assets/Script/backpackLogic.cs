@@ -6,6 +6,7 @@ public class backpackLogic : MonoBehaviour
 {
     public checkGrabObj checkGrabObjs;
     public GameObject slot01;
+    
     public Collider2D lastGrabOjb;
     public bool slot1Bool;
 
@@ -35,9 +36,9 @@ public class backpackLogic : MonoBehaviour
         lastGrabOjb = other;
 
 
-            if(other.gameObject.tag == "GrabObj"){
+            if(lastGrabOjb.gameObject.tag == "GrabObj"){
                 lastGrabOjb.GetComponent<Rigidbody2D>().isKinematic = true;
-                Debug.Log("akjshkjsa");
+                slot1Bool = true;
                 slotFunction();
 
             }
